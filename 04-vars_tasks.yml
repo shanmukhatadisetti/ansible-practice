@@ -6,8 +6,8 @@
     duration: 120H
     trainer: SivaKumar
   tasks:
-    vars:
-      course: devops with azure
     - name: role level variables
+      vars:
+        course: devops with azure
       ansible.builtin.debug:
         msg: "Hello, Course name is {{ course }}, and duration is {{ duration }}, and trainer is {{ trainer }}."
