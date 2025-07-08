@@ -1,0 +1,9 @@
+- name: variable from role
+  hosts: local
+  connection: local
+  vars_files:
+  - files.yaml
+  tasks:
+    - name: role level variables
+      ansible.builtin.debug:
+        msg: "Hello, Course name is {{ course }}, and duration is {{ duration }}, and trainer is {{ trainer }}."
