@@ -5,6 +5,9 @@
   - name: course
     prompt: Enter what Course you want to Enroll
     private: false
+  vars:
+    duration: 120H
+    trainer: SivaKumar
   tasks:
     - name: role level variables
       ansible.builtin.debug:
