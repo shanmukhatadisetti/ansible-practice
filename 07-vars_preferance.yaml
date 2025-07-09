@@ -1,0 +1,9 @@
+- name: vars preferances
+  hosts: local
+  connection: local
+  vars:
+  - greeting: greetings from task level
+  tasks:
+    - name: sending greetings
+      ansible.builtin.debug:
+        msg: "{{ greeting }}"
