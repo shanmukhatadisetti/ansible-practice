@@ -1,9 +1,17 @@
 - name: vars preferances
   hosts: local
   connection: local
+  vars_files:
+  - files.yaml
+  vars_prompt:
+  - name: greeting
+    prompt: enter greetings from
+    private: true
   vars:
   - greeting: greetings from task level
   tasks:
     - name: sending greetings
+      # vars:
+      #   greeting: greetings from task level
       ansible.builtin.debug:
         msg: "{{ greeting }}"
